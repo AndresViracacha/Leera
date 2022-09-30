@@ -13,6 +13,11 @@ body{
     margin-top: 80px;
     position: relative;
 }
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 header{
     position: absolute;
     display: flex;
@@ -31,49 +36,27 @@ header{
     border-radius: 100px;
     cursor: pointer;
 }
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.play{
-    background-color: #F79824;
-    width: 300px;
-    height: 300px;
-    border-radius: 300px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
-    display: flex;
-    align-items: center;
-    padding-left: 99px;
-}
-.play img{
-    width: 126px;
-}
-.cards{
-    display: flex;
-    width: 720px;
-    justify-content: space-between;
+.image{
+    width: 250px;
+    height: 250px;
+    background-color: #323232;
     margin: 0 auto;
-    margin-top: 20px;
-}
-.card{
-    width: 200px;
-    height: 200px;
-    background-color: #EDF6FC;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 96px;
 }
-.card span{
-    padding: 0px;
+.story{
+    width: 890px;
+    background-color: #F5F4EB;
+    border-radius: 20px;
+    font-size: 24px;
+    margin-top: 60px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 12px 20px;
 }
 footer{
     position: absolute;
     right: 0;
     bottom: 0;
+    margin-bottom: -107px;
 }
 .next{
     background-color: #F5F4EB;

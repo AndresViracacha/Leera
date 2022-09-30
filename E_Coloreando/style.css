@@ -31,44 +31,42 @@ header{
     border-radius: 100px;
     cursor: pointer;
 }
-section{
+.color_picker{
+    width: 70px;
+    background-color: #F5F4EB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 16px;
+    padding-bottom: 8px;
 }
-.play{
-    background-color: #F79824;
-    width: 300px;
-    height: 300px;
-    border-radius: 300px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+.color_selected{
+    width: 48px;
+    height: 15px;
+    background: #B80C09;
+    box-shadow: 0px 4px 10px rgba(184, 12, 9, 0.25);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+section{
     display: flex;
-    align-items: center;
-    padding-left: 99px;
+    justify-content: center;
 }
-.play img{
-    width: 126px;
-}
-.cards{
-    display: flex;
-    width: 720px;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-.card{
-    width: 200px;
-    height: 200px;
-    background-color: #EDF6FC;
+.canvas{
+    background-color: #FBFBFB;
+    width: 846px;
+    height: 640px;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 96px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.card span{
-    padding: 0px;
+.canvas img{
+    width: 740px;
 }
 footer{
     position: absolute;
