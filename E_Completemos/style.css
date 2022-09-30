@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mali';
+    background-image: url(../img/Fondo.png);
+}
+.container{
+    width: 1110px;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+}
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+    font-size: 48px;
+    color: #0f0f0f;
+}
+.button_home{
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: #F5F4EB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    cursor: pointer;
+}
+.image{
+    width: 250px;
+    height: 250px;
+    background-color: #323232;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.word{
+    font-size: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play{
+    background-color: #F79824;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+    display: flex;
+    align-items: center;
+    padding-left: 33px;
+    margin-left: 40px;
+}
+.cards{
+    display: flex;
+    width: 720px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: #EDF6FC;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 96px;
+}
+.card span{
+    padding: 0px;
+}
+footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.next{
+    background-color: #F5F4EB;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
