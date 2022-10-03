@@ -3,3 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.s{
+    width: 100px;
+    height: 100px;
+    background-color: #F79824;
+    border-radius: 20px;
+}
