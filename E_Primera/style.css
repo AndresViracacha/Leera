@@ -8,28 +8,11 @@ body{
     background-image: url(../img/Fondo.png);
 }
 .container{
-    width: 1110px;
+    width: 80%;
+    max-width: 1110px;
     margin: 0 auto;
     margin-top: 80px;
     position: relative;
-}
-header{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-weight: 700;
-    font-size: 48px;
-    color: #0f0f0f;
-}
-.button_home{
-    width: 70px;
-    height: 70px;
-    border: none;
-    background-color: #F5F4EB;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
-    cursor: pointer;
 }
 section{
     display: flex;
@@ -70,19 +53,42 @@ section{
 .card span{
     padding: 0px;
 }
-footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.next{
-    background-color: #F5F4EB;
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+
+.menu{
+    padding: 80px 88px 80px 88px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;    
+    height: 100%;
     display: flex;
-    align-items: center;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: #F79824;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-family: 'Mali';
+    color:#EDF6FC;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-left: 40px;
+    align-items: center;
+}
+.button span{
+    font-size: 64px;
+    line-height: 0;
+}
+button p{
+    margin-top: 20px;
+}
+.menu-bottom{
+    display: flex;
+    justify-content: space-between;
 }
