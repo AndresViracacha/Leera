@@ -16,13 +16,37 @@
     <a href="./E_Silabas/end.html">Silabas Final</a>
     <p id="ha"></p>
 
-    <div class="s">
+    <div class="s" id="s">
         Reproducir
     </div>
     <script>
+        var elem = document.documentElement;
+        document.getElementById("s").addEventListener("click",()=>{
+            openFullscreen();
+        })
         setInterval(() => {
             document.getElementById("ha").innerText=window.innerWidth;
         }, 300);
+        function openFullscreen() {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+        }
+
+        /* Close fullscreen */
+        function closeFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
+        }
     </script>
 </body>
 </html>
