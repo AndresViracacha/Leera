@@ -53,6 +53,7 @@ section{
 }
 .card span{
     padding: 0px;
+    text-transform: uppercase;
 }
 
 .menu{
