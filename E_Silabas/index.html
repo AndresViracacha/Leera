@@ -5,40 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Completemos!</title>
-    <link rel="stylesheet" href="./styleI.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <button class="button_home">
+    
+    <div class="menu">
+        <div>
+            <button class="button">
                 <img src="../img/home.svg" alt="">
+                Menú
             </button>
-            <p>Puntos: 40</p>
-        </header>
+        </div>
+        <div class="menu-bottom">
+            <button class="button">
+                <p>
+                    <span>?</span> <br>
+                    Ayuda
+                </p>
+            </button>
+            <button class="button" id="next">
+                <img src="../img/next.svg" alt="">
+                Avanzar
+            </button>
+        </div>
+    </div>
+    <div class="container">
         <section>
-            <div class="play">
+            <div class="play" id="playButton">
                 <img src="../img/play.svg" alt="">
             </div>
             <div class="cards">
+                
                 <div class="card">
-                    <span>Ha</span>
+                    <span></span>
                 </div>
                 <div class="card">
-                    <span>Mo</span>
+                    <span></span>
                 </div>
                 <div class="card">
-                    <span>Si</span>
+                    <span></span>
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="next">
-                <img src="../img/next.svg" alt="">
-            </div>
-        </footer>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>

@@ -11,21 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <button class="button_home">
+    <div class="menu">
+        <div>
+            <button class="button">
                 <img src="../img/home.svg" alt="">
+                Menú
             </button>
-            <p>Puntos: 40</p>
-        </header>
+        </div>
+        <div class="menu-bottom">
+            <button class="button">
+                <p>
+                    <span>?</span> <br>
+                    Ayuda
+                </p>
+            </button>
+            <button class="button" id="next">
+                <img src="../img/next.svg" alt="">
+                Avanzar
+            </button>
+        </div>
+    </div>
+    <div class="container">    
         <section>
             <div class="image">
-                <img src="./" alt="">
+                <img src="./asdf" id="image" alt="">
             </div>
             <div class="word">
-                <p>C_arro</p>
+                <p id="word">C_arro</p>
                 <div class="play">
-                    <img src="../img/play.svg" alt="">
+                    <img src="../img/play.svg" id="playButton" alt="">
                 </div>
             </div>
             <div class="cards">
@@ -40,11 +54,7 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="next">
-                <img src="../img/next.svg" alt="">
-            </div>
-        </footer>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>

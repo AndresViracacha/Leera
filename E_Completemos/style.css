@@ -13,30 +13,54 @@ body{
     margin-top: 80px;
     position: relative;
 }
-header{
-    position: absolute;
+.menu{
+    padding: 80px 88px 80px 88px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;    
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: #F79824;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-family: 'Mali';
+    color:#EDF6FC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button span{
+    font-size: 64px;
+    line-height: 0;
+}
+button p{
+    margin-top: 20px;
+}
+.menu-bottom{
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    font-weight: 700;
-    font-size: 48px;
-    color: #0f0f0f;
-}
-.button_home{
-    width: 70px;
-    height: 70px;
-    border: none;
-    background-color: #F5F4EB;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
-    cursor: pointer;
 }
 .image{
     width: 250px;
     height: 250px;
-    background-color: #323232;
+    background-color: #ffffff;
     margin: 0 auto;
     border-radius: 20px;
+    padding: 20px;
+}
+.image img{
+    width: 100%;
 }
 .word{
     font-size: 128px;
@@ -72,6 +96,15 @@ header{
     justify-content: center;
     align-items: center;
     font-size: 96px;
+    transition: 1s all ease;
+}
+.correct{
+    background-color: #389DE0;
+    color: #EDF6FC;
+}
+.incorrect{
+    background-color: #B80C09;
+    color: #EDF6FC;
 }
 .card span{
     padding: 0px;

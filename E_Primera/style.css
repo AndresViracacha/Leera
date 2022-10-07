@@ -50,6 +50,15 @@ section{
     align-items: center;
     font-size: 96px;
     margin-top: 40px;
+    transition: 1s all ease;
+}
+.correct{
+    background-color: #389DE0;
+    color: #EDF6FC;
+}
+.incorrect{
+    background-color: #B80C09;
+    color: #EDF6FC;
 }
 .card span{
     padding: 0px;

@@ -8,7 +8,7 @@ body{
     background-image: url(../img/Fondo.png);
 }
 .container{
-    width: 1110px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 80px;
     position: relative;
@@ -18,54 +18,103 @@ section{
     flex-direction: column;
     align-items: center;
 }
-header{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-weight: 700;
-    font-size: 48px;
-    color: #0f0f0f;
-}
-.button_home{
-    width: 70px;
-    height: 70px;
-    border: none;
-    background-color: #F5F4EB;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
-    cursor: pointer;
-}
-.image{
-    width: 250px;
-    height: 250px;
-    background-color: #323232;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-.story{
-    width: 890px;
-    background-color: #F5F4EB;
-    border-radius: 20px;
-    font-size: 24px;
-    margin-top: 60px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    padding: 12px 20px;
-}
-footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-bottom: -107px;
-}
-.next{
-    background-color: #F5F4EB;
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
+.play{
+    background-color: #F79824;
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-left: 40px;
+    padding-left: 99px;
 }
+.play img{
+    width: 126px;
+}
+.cards{
+    display: flex;
+    max-width: 720px;
+    width: 56%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: #EDF6FC;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 96px;
+    margin-top: 40px;
+    transition: 1s all ease;
+}
+.correct{
+    background-color: #389DE0;
+    color: #EDF6FC;
+}
+.incorrect{
+    background-color: #B80C09;
+    color: #EDF6FC;
+}
+.card span{
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+.menu{
+    padding: 80px 88px 80px 88px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;    
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: #F79824;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-family: 'Mali';
+    color:#EDF6FC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button span{
+    font-size: 64px;
+    line-height: 0;
+}
+button p{
+    margin-top: 20px;
+}
+.menu-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1130px) {
+    .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .card{
+        width:  30%;
+        height: 30%;
+        min-width: 150px;
+        height: 150px ;
+        margin: 0 20px;
+        margin-bottom: 20px;
+    }
+  }
