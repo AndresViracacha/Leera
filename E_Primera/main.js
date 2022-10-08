@@ -43,7 +43,7 @@ const selectLetter = () =>{
                 a = false;
             }
             if(letters[index]== lettersUsed[i]){
-                a = true;
+                a = true;                
                 index = Math.floor(Math.random()*27);
             }
         }

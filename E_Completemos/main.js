@@ -79,13 +79,13 @@ const selectLetter = () =>{
     while (a) {
         index = Math.floor(Math.random()*27);
         for (let i = 0; i < lettersUsed.length; i++) {
-            if(letters[index]!= lettersUsed[i].toUpperCase()){
+            if(letters[index]!= lettersUsed[i]){
                 a = false;
             }
-            if(letters[index]== lettersUsed[i].toUpperCase()){
-                a = true;
+            if(letters[index]== lettersUsed[i]){
+                a = true;                
                 index = Math.floor(Math.random()*27);
-            }
+            }            
         }
     }
     lettersUsed.push(letters[index]);
