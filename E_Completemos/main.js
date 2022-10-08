@@ -108,6 +108,7 @@ let wordSelected = setCharAt(itemSelected.selectedWord,charSelected,"_");
 let cards = document.getElementsByClassName("card");
 let playButton = document.getElementById("playButton");
 let next = document.getElementById("next");
+var elem = document.documentElement;
 
 for (let i = 0; i < cards.length; i++) {
     cards[i].children[0].innerHTML=letters[Math.floor(Math.random()*letters.length)];
@@ -139,7 +140,18 @@ voice.lang = 'es';
 playButton.addEventListener('click',()=>{
     voice.text = itemSelected.selectedWord;
     jarvis.speak(voice);
+    openFullscreen();
 });
+
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+    }
 
 next.addEventListener('click',()=>{
     lettersUsed = [];

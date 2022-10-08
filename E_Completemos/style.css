@@ -29,6 +29,7 @@ body{
     justify-content: space-between;
 }
 .button{
+    position: absolute;
     width: 100px;
     height: 100px;
     background-color: #F79824;
@@ -50,17 +51,17 @@ body{
 button p{
     margin-top: 20px;
 }
-.menu-top{
-    padding: 30px;
+.button-help{
+    bottom: 30px;
+    left: 30px;
 }
-.menu-bottom{
-    display: flex;
-    bottom: 0px;
-    position: absolute;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 0 30px;
-    justify-content: space-between;
+.button-menu{
+    left: 30px;
+top: 30px;
+}
+.button-next{
+    right: 30px;
+    bottom: 30px;
 }
 .image{
     width: 200px;
@@ -77,8 +78,10 @@ button p{
 .word{
     font-size: 64px;
     display: flex;
+    margin-top: 24px;
     justify-content: center;
     align-items: center;
+
 }
 .play{
     background-color: #F79824;
@@ -96,7 +99,7 @@ button p{
     min-width: 60%;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 48px;
 }
 .card{
     width: 128px;
