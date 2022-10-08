@@ -25,7 +25,7 @@
             openFullscreen();
         })
         setInterval(() => {
-            document.getElementById("ha").innerText=window.innerWidth;
+            document.getElementById("ha").innerText="ancho:"+window.innerWidth + "--alto:"+window.innerHeight;
         }, 300);
         function openFullscreen() {
         if (elem.requestFullscreen) {
