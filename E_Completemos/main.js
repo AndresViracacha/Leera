@@ -129,8 +129,13 @@ for (let i = 0; i < cards.length; i++) {
         }
         if(cards[i].children[0].innerText!=selectedWord[charSelected].toUpperCase()){
             cards[i].classList.add("incorrect")
+            
         }
-    })
+        let letter = document.getElementsByClassName("card")[i].children[0].textContent;
+        voice.text = letter;
+        jarvis.speak(voice);
+    })    
+    
 }
 
 image.src=itemSelected.imageRoute;

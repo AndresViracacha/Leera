@@ -57,11 +57,43 @@ button p{
 }
 .button-menu{
     left: 30px;
-top: 30px;
+    top: 30px;
 }
 .button-next{
     right: 30px;
     bottom: 30px;
+}
+.state{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.state-bar{
+    width: 200px;
+    height: 20px;
+    background: #F5F4EB;
+    border: 2px solid #F79824;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+.state-progress{
+    width: 30%;
+    background-color: #F79824;
+    border-radius: 25px;
+
+}
+.state-porcent{
+    font-size: 12px;
+    color: #F5F4EB;
+    text-align: end;
+    padding-right: 5px;
+}
+.state-points{
+    text-align: end;
+    margin-top: 12px;
+    font-size: 16px;
 }
 .image{
     width: 200px;
