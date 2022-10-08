@@ -130,6 +130,9 @@ for (let i = 0; i < cards.length; i++) {
         if(cards[i].children[0].innerText!=selectedWord[charSelected].toUpperCase()){
             cards[i].classList.add("incorrect")
         }
+        let letter = document.getElementsByClassName("card")[i].children[0].textContent;
+        voice.text = letter;
+        jarvis.speak(voice); 
     })
 }
 
@@ -156,6 +159,9 @@ function openFullscreen() {
 next.addEventListener('click',()=>{
     lettersUsed = [];
     positionCorrect = Math.floor(Math.random()*3);
+    let next1 = document.getElementById("next").innerText;
+        voice.text = next1;
+        jarvis.speak(voice);
     for (let i = 0; i < 3; i++) {
         cards[i].classList.remove("incorrect");
         cards[i].classList.remove("correct");

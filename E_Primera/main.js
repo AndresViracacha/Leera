@@ -88,6 +88,9 @@ for (let i = 0; i < options.length; i++) {
         if(options[i].children[0].innerText!=firstLetter){
             options[i].classList.add("incorrect")
         }
+        let letter = document.getElementsByClassName("card")[i].children[0].textContent;
+        voice.text = letter;
+        jarvis.speak(voice);
     })
 }
 next.addEventListener('click',()=>{
@@ -95,6 +98,9 @@ next.addEventListener('click',()=>{
     firstLetter = word[0].toUpperCase();
     lettersUsed = [];
     positionCorrect = Math.floor(Math.random()*3);
+    let next1 = document.getElementById("next").innerText;
+        voice.text = next1;
+        jarvis.speak(voice);
     for (let i = 0; i < 3; i++) {
         options[i].classList.remove("incorrect");
         options[i].classList.remove("correct");
