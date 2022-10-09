@@ -16,18 +16,11 @@ let sketch = function(p) {
     }
         
     p.draw = function() {
-        if (p.mouseIsPressed) {
-            p.fill(0);
-        } else {
+        p.strokeWeight(10);
+        p.stroke(255);
+        if (p.mouseIsPressed === true) {
+            p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
         }
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
-        p.ellipse(p.mouseX, p.mouseY, 8, 8);
     }
 }
   new p5(sketch, canva);
