@@ -11,8 +11,9 @@ colorPicker.addEventListener("click",()=>{
 
 let sketch = function(p) {
     p.setup = function(){
-      p.createCanvas(100, 100);
+      p.createCanvas(canva.clientWidth,canva.clientHeight);
       p.background(200);
+      
     }
         
     p.draw = function() {
