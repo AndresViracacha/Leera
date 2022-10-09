@@ -4,34 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Completemos!</title>
+    <title>¡Primera!</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../componentesCSS/botonMenuGame.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="menu">
-        <div>
-            <button class="button">
-                <img src="../img/home.svg" alt="">
-                Menú
-            </button>
-        </div>
-        <div class="menu-bottom">
-            <button class="button">
-                <p>
-                    <span>?</span> <br>
-                    Ayuda
-                </p>
-            </button>
-            <button class="button" id="next">
-                <img src="../img/next.svg" alt="">
-                Avanzar
-            </button>
-        </div>
-    </div>
     <div class="container">
         <section>
             <div class="play" id="playButton">
@@ -50,6 +30,30 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div class="hud">
+        <button class="button-menu button">
+            <img src="../img/home.svg" alt="">
+            Menú
+        </button>
+        <button class="button-help button">
+            <p>
+                <span>?</span> <br>
+                Ayuda
+            </p>
+        </button>
+        <button class="button-next button" id="next">
+            <img src="../img/next.svg" alt="">
+            Avanzar
+        </button>
+        <div class="state">
+            <div class="state-bar">
+                <div class="state-progress">
+                    <p class="state-porcent">30%</p>
+                </div>
+            </div>
+            <p class="state-points">Puntos: <span>100</span></p>
+        </div>
     </div>
     <script src="./main.js"></script>
 </body>
