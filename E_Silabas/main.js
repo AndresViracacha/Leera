@@ -68,7 +68,14 @@ for (let i = 0; i < options.length; i++) {
         }
         if(options[i].children[0].innerText!=word.toUpperCase()){
             options[i].classList.add("incorrect")
+        }        
+        let letter = document.getElementsByClassName("card")[i].children[0].textContent;
+        voice.text = letter;
+        console.log(letter);
+        if (letter == "lla"){
+            voice.text= "ya";
         }
+        jarvis.speak(voice);
     })
 }
 next.addEventListener('click',()=>{
