@@ -6,32 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Completemos!</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../componentesCSS/botonMenuGame.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header>
-            <button class="button_home">
-                <img src="../img/home.svg" alt="">
-            </button>
-            <button class="color_picker">
-                <img src="../img/brush.svg" alt="">
-                <div class="color_selected">
-                </div>
-            </button>
-        </header>
         <section>
             <div class="canvas">
                 <img src="../img/carro_dibujo.png" alt="">
             </div>
         </section>
-        <footer>
-            <div class="next">
-                <img src="../img/next.svg" alt="">
-            </div>
-        </footer>
     </div>
+    <div class="hud">
+        <button class="color_picker">
+            <img src="../img/brush.svg" alt="">
+            <div class="color_selected">
+            </div>
+        </button>
+        <button class="button-menu button">
+            <img src="../img/home.svg" alt="">
+            Menú
+        </button>
+        <button class="button-help button">
+            <p>
+                <span>?</span> <br>
+                Ayuda
+            </p>
+        </button>
+        <button class="button-next button" id="next">
+            <img src="../img/next.svg" alt="">
+            Avanzar
+        </button>
+        <div class="state">
+            <div class="state-bar">
+                <div class="state-progress">
+                    <p class="state-porcent">30%</p>
+                </div>
+            </div>
+            <p class="state-points">Puntos: <span>100</span></p>
+        </div>
+    </div>
+    <div class ="color-menu">
+        <div class="exit-boton">
+            <img src="../img/exit.svg" alt="">
+        </div>
+        <div class="colors">
+            <div class="color-box">
+                <div class="color-sample rojo"></div>
+                <span>Rojo</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample amarillo"></div>
+                <span>Amarillo</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample azul"></div>
+                <span>Azul</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample naranja"></div>
+                <span>Naranja</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample verde"></div>
+                <span>Verde</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample morado"></div>
+                <span>Morado</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample blanco"></div>
+                <span>Blanco</span>
+            </div>
+            <div class="color-box">
+                <div class="color-sample negro"></div>
+                <span>Negro</span>
+            </div>
+        </div>
+    </div>
+    <div class="opacity-modal-menu"></div>
 </body>
 </html>

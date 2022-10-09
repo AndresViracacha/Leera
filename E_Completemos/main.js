@@ -59,7 +59,6 @@ const words = [
     ["Vela","./img/Vela.png"],
     ["Zapato","./img/Zapato.png"]
 ]
-
 let voice = new SpeechSynthesisUtterance();
 let jarvis = window.speechSynthesis;
 
