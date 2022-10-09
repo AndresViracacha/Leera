@@ -21,6 +21,13 @@ let sketch = function(p) {
         } else {
         }
         p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
+        p.ellipse(p.mouseX, p.mouseY, 8, 8);
     }
 }
   new p5(sketch, canva);
