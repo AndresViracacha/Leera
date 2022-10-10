@@ -4,49 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal :) :) :)</title>
+    <title>Leera</title>
+    <link rel="stylesheet" href="./componentesCSS/botonMenuGame.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Indice</h1>
-    <a href="./E_Coloreando/index.html">Coloreando</a>
-    <a href="./E_Completemos/index.html">Completemos</a>
-    <a href="./E_Primera/index.html">Primera</a>
-    <a href="./E_Silabas/index.html">Silabas</a>
-    <a href="./E_Silabas/end.html">Silabas Final</a>
-    <p id="ha"></p>
-
-    <div class="s" id="s">
-        Reproducire
+    <div class="container">
+        <img src="./img/logo.png" class="img-landing" alt="">
+        <p class="copy-landing">Logra que tu niño aprenda a leer mientras se divierte</p>
+        <p>A continuación encontrarás diversos juegos que apoyarán la fase temprana de aprendizaje de la lectura. Te aconsejamos realizar un acompañamiento durante el uso de está aplicación para guiar al niño en el uso de la misma, como también para darle apoyo a la interrogantes que él o ella pueda tener.</p>
+        <div class="exercise">
+            <div class="preview">
+                <img src="./img/pCompletemos.png" alt="">
+            </div>
+            <div class="info">
+                <h2>¡Completemos!</h2>
+                <p>Aprende a reconocer los sonidos de las diferentes letras y su posición en las palabras en este divertido juego. Entre más rapido las reconozcas, mas puntos obtendrás.</p>
+                <div class="button-container">
+                    <a href="./E_Completemos/index.html">
+                        <button class="button" id="next">
+                            <img src="../img/next.svg" alt="">
+                            Avanzar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <div class="preview">
+                <img src="./img/pPrimera.png" alt="">
+            </div>
+            <div class="info">
+                <h2>Primera</h2>
+                <p>Escucha atentamente la pronunciación de la palabra para poder indicar cual es la letra por la que empieza dicha palabra. Entre más rapido las reconozcas, mas puntos obtendrás.</p>
+                <div class="button-container">
+                    <a href="./E_Primera/index.html">
+                        <button class="button" id="next">
+                            <img src="../img/next.svg" alt="">
+                            Avanzar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <div class="preview">
+                <img src="./img/pColoreando.png" alt="">
+            </div>
+            <div class="info">
+                <h2>¡Coloreando!</h2>
+                <p>Descubre como se escriben y se pronunciacian los principales colores mientras coloreas divertidos dibujos.</p>
+                <div class="button-container">
+                    <a href="./E_Coloreando/index.html">
+                        <button class="button" id="next">
+                            <img src="../img/next.svg" alt="">
+                            Avanzar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <div class="preview">
+                <img src="./img/pSilabas.png" alt="">
+            </div>
+            <div class="info">
+                <h2>¡Silabas!</h2>
+                <p>Recoleta fragmentos de cuentos mientras aprendes a reconocer las silabas.Entre más rapido las reconozcas, mas puntos obtendrás.</p>
+                <div class="button-container">
+                    <a href="./E_Silabas/index.html">
+                        <button class="button" id="next">
+                            <img src="../img/next.svg" alt="">
+                            Avanzar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <div class="preview">
+                <img src="./img/pSilabas.png" alt="">
+            </div>
+            <div class="info">
+                <h2>Relatos</h2>
+                <p>Recoleta fragmentos de cuentos mientras aprendes a reconocer las silabas.Entre más rapido las reconozcas, mas puntos obtendrás.</p>
+                <div class="button-container">
+                    <a href="./E_Completemos/index.html">
+                        <button class="button" id="next">
+                            <img src="../img/next.svg" alt="">
+                            Avanzar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <div class="preview">
+                <img src="./img/pSilabas.png" alt="">
+            </div>
+            <div class="info">
+                <h2>Abecedario</h2>
+                <p>Recoleta fragmentos de cuentos mientras aprendes a reconocer las silabas.Entre más rapido las reconozcas, mas puntos obtendrás.</p>
+                <div class="button-container">
+                    <a href="./E_Completemos/index.html">
+                        <button class="button" id="next">
+                            <img src="../img/next.svg" alt="">
+                            Avanzar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        var elem = document.documentElement;
-        document.getElementById("s").addEventListener("click",()=>{
-            openFullscreen();
-        })
-        setInterval(() => {
-            document.getElementById("ha").innerText="ancho:"+window.innerWidth + "--alto:"+window.innerHeight;
-        }, 300);
-        function openFullscreen() {
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) { /* Safari */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE11 */
-            elem.msRequestFullscreen();
-        }
-        }
-
-        /* Close fullscreen */
-        function closeFullscreen() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) { /* Safari */
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { /* IE11 */
-            document.msExitFullscreen();
-        }
-        }
-    </script>
+    <footer>
+        <img src="./img/logoInver.png" alt="">
+        <p>
+            Universidad De San Buenvantura Bogotá
+            <br>
+            <br>
+            Desarrollado con <span><img src="./img/love.svg" alt=""></span>
+            <br>
+            Andrés Felipe Viracachá Suárez
+        </p>
+    </footer>
 </body>
 </html>
