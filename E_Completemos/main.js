@@ -144,18 +144,7 @@ voice.lang = 'es';
 playButton.addEventListener('click',()=>{
     voice.text = itemSelected.selectedWord;
     jarvis.speak(voice);
-    openFullscreen();
 });
-
-function openFullscreen() {
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    }
-    }
 
 next.addEventListener('click',()=>{
     lettersUsed = [];
@@ -184,49 +173,3 @@ next.addEventListener('click',()=>{
     image.src=itemSelected.imageRoute;
     wordImage.innerText=wordSelected;
 })
-
-
-
-
-/*
-//////////////////////////////////////////////////////////
-let word = itemSelected;
-let firstLetter = word[0].toUpperCase();
-
-let voice = new SpeechSynthesisUtterance();
-let jarvis = window.speechSynthesis;
-
-let playButton = document.getElementById("playButton");
-let next = document.getElementById("next");
-
-let options = document.getElementsByClassName("card");
-
-
-voice.lang = 'es';
-playButton.addEventListener('click',()=>{
-    voice.text = word;
-    jarvis.speak(voice);
-});
-
-
-
-
-next.addEventListener('click',()=>{
-    word = selectWord();
-    firstLetter = word[0].toUpperCase();
-    lettersUsed = [];
-    for (let i = 0; i < 3; i++) {
-        options[i].classList.remove("incorrect");
-        options[i].classList.remove("correct");
-        options[i].children[0].innerText="";
-    }
-
-    options[positionCorrect].children[0].innerText=firstLetter;
-    lettersUsed.push(firstLetter);
-
-    for (let i = 0; i < 3; i++) {
-        if(options[i].children[0].innerText==""){
-            options[i].children[0].innerText=letters[selectLetter()];
-        }
-    }
-}) */

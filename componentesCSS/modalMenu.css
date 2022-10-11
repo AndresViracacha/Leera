@@ -12,6 +12,7 @@
     transition: 1s all ease;
     display: flex;
     flex-direction: column;
+    display: none;
 }
 .opacity-modal-menu{
     width: 100%;
