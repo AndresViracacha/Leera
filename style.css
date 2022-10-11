@@ -6,7 +6,7 @@
 }
 body{
     font-family: 'Mali';
-    background-image: url("../img/Fondo.png");
+    background-image: url("./img/Fondo.png");
 }
 .container{
     max-width: 1110px;
