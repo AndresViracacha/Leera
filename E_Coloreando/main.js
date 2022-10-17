@@ -52,7 +52,7 @@ new p5(sketch, canva);
 for (let i = 0; i < colors.length; i++) {
     const element = colors[i];
     element.addEventListener("click",()=>{
-        colorSelect=window.getComputedStyle( colors[i].children[0] ,null).getPropertyValue('background'); 
+        colorSelect=window.getComputedStyle( colors[i].children[0] ,null).getPropertyValue('background-color'); 
         colorPicker.children[1].style.backgroundColor=colorSelect
     })
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Completemos!</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js" integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../componentesCSS/botonMenuGame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div draggable="true" class="canvas" id="canva">
+            </div>
+        </section>
+    </div>
+    <div class="hud">
+        <button class="color_picker" id="color-picker">
+            <img src="../img/brush.svg" alt="">
+            <div class="color_selected">
+            </div>
+        </button>
+        <button class="button-menu button">
+            <img src="../img/home.svg" alt="">
+            Menú
+        </button>
+        <button class="button-help button">
+            <p>
+                <span>?</span> <br>
+                Ayuda
+            </p>
+        </button>
+        <button class="button-next button" id="next">
+            <img src="../img/next.svg" alt="">
+            Avanzar
+        </button>
+    </div>
+    <div class ="color-menu" id="color-menu">
+        <div class="exit-boton" id="exit-boton">
+            <img src="../img/exit.svg" alt="">
+        </div>
+        <div class="colors">
+            <div class="color-box">
+                <img draggable="true" id="cama" src="./img/habitacion/cama.png" alt="">
+            </div>
+            <div class="color-box">
+                <img draggable="true" id="lampara" src="./img/habitacion/lampara-de-mesa.png" alt="">
+            </div>
+            <div class="color-box">
+                <img draggable="true" id="mesa" src="./img/habitacion/mesa.png" alt="">
+            </div>
+            <div class="color-box">
+                <img draggable="true" id="silla" src="./img/habitacion/silla.png" alt="">
+            </div>
+            <div class="color-box">
+                <img draggable="true" id="ventanas" src="./img/habitacion/ventanas.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
