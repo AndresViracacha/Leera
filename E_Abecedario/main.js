@@ -38,7 +38,8 @@ for (let i = 0; i < colors.length; i++) {
         canColor = true;
         element.style.position="absolute";
         element.style.left = touchLocation.pageX + 'px';
-        element.style.top = touchLocation.pageY + 'px';
+        console.log(element);
+        element.style.top = touchLocation.pageY+ window.innerHeight/2 + element.clientHeight + 'px';
       });
     element.addEventListener('touchend', function(e) {
         // current box position.

@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    position: relative;
     font-family: 'Mali';
     background-image: url(../img/Fondo.png);
 }
