@@ -26,6 +26,59 @@ colorPicker.addEventListener("click",()=>{
     colorMenu.style.top="50%";
     canColor = false;
 });
+
+for (let i = 0; i < colors.length; i++) {
+    const element = colors[i];
+    element.addEventListener('touchmove', function(e) {
+        // grab the location of touch
+        var touchLocation = e.targetTouches[0];
+        
+        // assign box new coordinates based on the touch.
+        colorMenu.style.top="-50vh";
+        canColor = true;
+        element.style.position="absolute";
+        element.style.left = touchLocation.pageX + 'px';
+        element.style.top = touchLocation.pageY + 'px';
+      });
+    element.addEventListener('touchend', function(e) {
+        // current box position.
+        var x = parseInt(element.style.left);
+        var y = parseInt(element.style.top);
+    })
+}
+
+
+  
+  /* record the position of the touch
+  when released using touchend event.
+  This will be the drop position. */
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 function dragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.id);
     setTimeout(() => {
@@ -67,7 +120,7 @@ for (let i = 0; i < colors.length; i++) {
     const element = colors[i];
     element.addEventListener("dragstart",dragStart)
 }
-
+ */
 
 
 
