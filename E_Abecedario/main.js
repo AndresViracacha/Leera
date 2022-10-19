@@ -49,37 +49,6 @@ for (let i = 0; i < colors.length; i++) {
 }
 
 
-  
-  /* record the position of the touch
-  when released using touchend event.
-  This will be the drop position. */
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
 function dragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.id);
     setTimeout(() => {
@@ -121,7 +90,7 @@ for (let i = 0; i < colors.length; i++) {
     const element = colors[i];
     element.addEventListener("dragstart",dragStart)
 }
- */
+
 
 
 

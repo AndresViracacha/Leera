@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mali';
+    background-image: url(../img/Fondo.png);
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    transition: 1s all ease;
+    right: 0;
+    left: 0;
+}
+.section-right{
+    right: 100vw;
+    transition: 1s all ease;
+}
+.section-left{
+    transition: 1s all ease;
+    right: -100vw;
+}
+.play{
+    background-color: #F79824;
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color:#F5F4EB ;
+    font-weight: 700;
+    padding-left: 3px;
+}
+.play img{
+    width: 42px;
+}
+.question{
+    font-size: 40px;
+    font-weight: 700;
+}
+.tail{
+    display: flex;
+    max-width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 48px;
+    font-size:24px;
+    font-weight: 500;
+}
+.cards{
+    display: flex;
+    min-width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 48px;
+    font-size:24px;
+    font-weight: 500;
+}
+.card{
+    width: 128px;
+    height: 128px;
+    background-color: #EDF6FC;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    transition: 1s all ease;
+    margin: 0 20px;
+}
+.card img{
+    width: 75px;
+}
+.arrow-right{
+    transform:translate(-50%,-50%) rotateZ(-90deg);
+    position: absolute;
+    top: 50%;
+    right:0px;
+    background: none;
+    border: none;
+}
+.arrow-left{
+    transform:translate(-50%,-50%) rotateZ(90deg);
+    position: absolute;
+    top: 50%;
+    left:60px;
+    background: none;
+    border: none;
+}
+.correct{
+    background-color: #389DE0;
+    color: #EDF6FC;
+}
+.incorrect{
+    background-color: #B80C09;
+    color: #EDF6FC;
+}
+
+.menu{
+    padding: 80px 88px 80px 88px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;    
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: #F79824;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-family: 'Mali';
+    color:#EDF6FC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button span{
+    font-size: 64px;
+    line-height: 0;
+}
+button p{
+    margin-top: 20px;
+}
+.menu-bottom{
+    display: flex;
+    justify-content: space-between;
+}

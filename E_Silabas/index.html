@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Silabas!</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../componentesCSS/botonMenuGame.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../componentesCSS/modalMenu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -55,6 +56,42 @@
             <p class="state-points">Puntos: <span>100</span></p>
         </div>
     </div>
+    <div class="modal-menu" id="modal-menu">
+        <div class="exit-modal-menu" id="exit-modal-menu"><span>X</span></div>
+        <p class="modal-title">Pausa</p>
+        <div class="fullscreen-option">
+            <label for="fullscreen">Pantalla completa</label>
+            <input type="checkbox" name="fullscreen" id="check-fullscreen">
+            <div class="modal-option">
+                <div class="option-button">
+                    <span>NO</span>
+                </div>
+            </div>
+        </div>
+        <div class="sound-option">
+            <label for="sound">Sonido</label>
+            <input type="checkbox" name="sound" id="check-sound" checked>
+            <div class="modal-option">
+                <div class="option-button">
+                    <span>NO</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <a href="../index.html">
+                <button id="modal-home">
+                    <img src="../img/home.svg" alt="">
+                    <span>Inicio</span>
+                </button>
+            </a>
+            <button>
+                <img src="../img/reset.svg" alt="">
+                <span>Reinicio</span>
+            </button>
+        </div>
+    </div>
+    
     <script src="./main.js"></script>
+    <script src="../componentesCSS/modalMenu.js"></script>
 </body>
 </html>

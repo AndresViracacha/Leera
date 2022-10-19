@@ -26,7 +26,7 @@
 // Y: Yodo, yoyo, yacía, yaga, yegua
 // Z: zapato, zapatilla, zorro, zarza, zarpar 
 // 134 palabras
-const words=["araña","año","arco","alambre","almidón","burro","barro","banco","bus","blanco","carro","camión","casa","celeste","cantar","dado","delfín","dinosaurio","dardo","diez","elefante","estribo","estaca","España","escoba","Francia","fósforo","faraón","felino","fantasma","gato","gimnasia","gris","ganso","gancho","hilo","helio","huevo","harina","hormiga","iglesia","institución","invitación","interno","isla","jaula","Jamaica","jarrón","juntar","jinete","koala","kiosco","karma","kerosene","kilo","ladrar","ladrón","lagarto","lila","largo","mano","malo","manso","marrón","millón","naranja","negro","ninguno","nube","nariz","ñuzco","ñu","ñudoso","ñacunda","ñanduti","obrero","orfebrería","oso","oscuro","octavo","púrpura","pera","piso","pantalla","pulso","querer","quemar","quedar","queso","ratón","rosa","rama","rito","rodar"," salmón","saltar","soltar","silbar","sol","tirar","tratar","timar","tocar","tomar","uva","uña","ultra","unir","urbano","velar","vela","volver","ver","vigilar","Washington","watts","waffle","whisky","walkman","xilófono","xenofobia","xilografía","xiloprotector","xerófito","Yodo","yoyo","yacía","yaga","yegua","zapato","zapatilla","zorro","zarza","zarpar"];
+const words=["araña","año","arco","alambre","almidón","burro","barro","banco","bus","blanco","carro","camión","casa","celeste","cantar","dado","delfín","dinosaurio","dardo","diez","elefante","estribo","estaca","España","escoba","Francia","fósforo","faraón","felino","fantasma","gato","gimnasia","gris","ganso","gancho","hilo","helio","huevo","harina","hormiga","iglesia","institución","invitación","interno","isla","jaula","Jamaica","jarrón","juntar","jinete","koala","kiosco","karma","karaoke","kilo","ladrar","ladrón","lagarto","lila","largo","mano","malo","manso","marrón","millón","naranja","negro","ninguno","nube","nariz","ñuzco","ñu","ñudoso","ñacunda","ñanduti","obrero","orfebrería","oso","oscuro","octavo","púrpura","pera","piso","pantalla","pulso","querer","quemar","quedar","queso","ratón","rosa","rama","rito","rodar"," salmón","saltar","soltar","silbar","sol","tirar","tratar","tiempo","tocar","tomar","uva","uña","ultra","unir","urbano","velar","vela","volver","ver","vigilar","Washington","watts","waffle","whisky","walkman","xilófono","xilografía","xiloprotector","xerófito","Yodo","yoyo","yacía","yaga","yegua","zapato","zapatilla","zorro","zarza","zarpar"];
 const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 const selectWord = (selectedWord) => {
@@ -62,7 +62,7 @@ let playButton = document.getElementById("playButton");
 let next = document.getElementById("next");
 
 let options = document.getElementsByClassName("card");
-let positionCorrect = Math.floor(Math.random()*3);
+let positionCorrectPrimera = Math.floor(Math.random()*3);
 let lettersUsed = [];
 
 voice.lang = 'es';
@@ -71,7 +71,7 @@ playButton.addEventListener('click',()=>{
     jarvis.speak(voice);
 });
 
-options[positionCorrect].children[0].innerText=firstLetter;
+options[positionCorrectPrimera].children[0].innerText=firstLetter;
 lettersUsed.push(firstLetter);
 
 for (let i = 0; i < 3; i++) {
@@ -97,7 +97,7 @@ next.addEventListener('click',()=>{
     word = selectWord();
     firstLetter = word[0].toUpperCase();
     lettersUsed = [];
-    positionCorrect = Math.floor(Math.random()*3);
+    positionCorrectPrimera = Math.floor(Math.random()*3);
     let next1 = document.getElementById("next").innerText;
         voice.text = next1;
         jarvis.speak(voice);
@@ -107,7 +107,7 @@ next.addEventListener('click',()=>{
         options[i].children[0].innerText="";
     }
 
-    options[positionCorrect].children[0].innerText=firstLetter;
+    options[positionCorrectPrimera].children[0].innerText=firstLetter;
     lettersUsed.push(firstLetter);
 
     for (let i = 0; i < 3; i++) {

@@ -1,4 +1,4 @@
-const words = [
+const wordsCompletemos = [
     ["Árbol","./img/Arbol.png"],
     ["Astronauta","./img/Astronauta.png"],
     ["Autobus","./img/Autobus.png"],
@@ -62,7 +62,7 @@ const words = [
 let voice = new SpeechSynthesisUtterance();
 let jarvis = window.speechSynthesis;
 
-const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const lettersCompletemos = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 let imageRoute = "";
 
@@ -78,20 +78,20 @@ const selectLetter = () =>{
     while (a) {
         index = Math.floor(Math.random()*27);
         for (let i = 0; i < lettersUsed.length; i++) {
-            if(letters[index]!= lettersUsed[i]){
+            if(lettersCompletemos[index]!= lettersUsed[i]){
                 a = false;
             }
-            if(letters[index]== lettersUsed[i]){
+            if(lettersCompletemos[index]== lettersUsed[i]){
                 a = true;                
                 index = Math.floor(Math.random()*27);
             }            
         }
     }
-    lettersUsed.push(letters[index]);
+    lettersUsed.push(lettersCompletemos[index]);
     return index;
 }
 const selectWord = () => {
-    let item = words[Math.floor(Math.random()*60)]
+    let item = wordsCompletemos[Math.floor(Math.random()*60)]
     selectedWord = item[0];
     imageRoute = item[1];
     return {selectedWord,imageRoute};
@@ -110,14 +110,14 @@ let next = document.getElementById("next");
 var elem = document.documentElement;
 
 for (let i = 0; i < cards.length; i++) {
-    cards[i].children[0].innerHTML=letters[Math.floor(Math.random()*letters.length)];
+    cards[i].children[0].innerHTML=lettersCompletemos[Math.floor(Math.random()*lettersCompletemos.length)];
 }
 
 cards[positionCorrect].children[0].innerText=selectedWord[charSelected].toUpperCase();
 lettersUsed.push(selectedWord[charSelected].toUpperCase());
 for (let i = 0; i < 3; i++) {
     if(cards[i].children[0].innerText==""){
-        cards[i].children[0].innerText=letters[selectLetter()];
+        cards[i].children[0].innerText=lettersCompletemos[selectLetter()];
     }
 }
 
@@ -161,13 +161,13 @@ next.addEventListener('click',()=>{
     charSelected = Math.floor(Math.random()*itemSelected.selectedWord.length);
     wordSelected = setCharAt(itemSelected.selectedWord,charSelected,"_");
     for (let i = 0; i < cards.length; i++) {
-        cards[i].children[0].innerHTML=letters[Math.floor(Math.random()*letters.length)];
+        cards[i].children[0].innerHTML=lettersCompletemos[Math.floor(Math.random()*lettersCompletemos.length)];
     }
     cards[positionCorrect].children[0].innerText=selectedWord[charSelected].toUpperCase();
     lettersUsed.push(selectedWord[charSelected].toUpperCase());
     for (let i = 0; i < 3; i++) {
         if(cards[i].children[0].innerText==""){
-            cards[i].children[0].innerText=letters[selectLetter()];
+            cards[i].children[0].innerText=lettersCompletemos[selectLetter()];
         }
     }
     image.src=itemSelected.imageRoute;
