@@ -38,17 +38,17 @@ const selectLetter = () =>{
     let index;
     while (a) {
         index = Math.floor(Math.random()*27);
-        for (let i = 0; i < lettersUsed.length; i++) {
-            if(letters[index]!= lettersUsed[i]){
+        for (let i = 0; i < lettersUsedPrimera.length; i++) {
+            if(letters[index]!= lettersUsedPrimera[i]){
                 a = false;
             }
-            if(letters[index]== lettersUsed[i]){
+            if(letters[index]== lettersUsedPrimera[i]){
                 a = true;                
                 index = Math.floor(Math.random()*27);
             }
         }
     }
-    lettersUsed.push(letters[index]);
+    lettersUsedPrimera.push(letters[index]);
     return index;
 }
 
@@ -63,7 +63,7 @@ let next = document.getElementById("next");
 
 let options = document.getElementsByClassName("card");
 let positionCorrectPrimera = Math.floor(Math.random()*3);
-let lettersUsed = [];
+let lettersUsedPrimera = [];
 
 voice.lang = 'es';
 playButton.addEventListener('click',()=>{
@@ -72,7 +72,7 @@ playButton.addEventListener('click',()=>{
 });
 
 options[positionCorrectPrimera].children[0].innerText=firstLetter;
-lettersUsed.push(firstLetter);
+lettersUsedPrimera.push(firstLetter);
 
 for (let i = 0; i < 3; i++) {
     if(options[i].children[0].innerText==""){
@@ -96,7 +96,7 @@ for (let i = 0; i < options.length; i++) {
 next.addEventListener('click',()=>{
     word = selectWord();
     firstLetter = word[0].toUpperCase();
-    lettersUsed = [];
+    lettersUsedPrimera = [];
     positionCorrectPrimera = Math.floor(Math.random()*3);
     let next1 = document.getElementById("next").innerText;
         voice.text = next1;
@@ -108,7 +108,7 @@ next.addEventListener('click',()=>{
     }
 
     options[positionCorrectPrimera].children[0].innerText=firstLetter;
-    lettersUsed.push(firstLetter);
+    lettersUsedPrimera.push(firstLetter);
 
     for (let i = 0; i < 3; i++) {
         if(options[i].children[0].innerText==""){
