@@ -20,19 +20,28 @@ function closeFullscreen() {
 }
 
 let modalMenu = document.getElementById("modal-menu");
+let modalHelp = document.getElementById("help-menu");
 let exitModalMenu = document.getElementById("exit-modal-menu");
+let exitModalHelp = document.getElementById("exit-boton-help");
 let buttonMenu = document.getElementsByClassName("button-menu")[0];
+let buttonHelp = document.getElementsByClassName("button-help")[0];
 let buttonReset = document.getElementsByClassName("modal-buttons")[0].children[1];
 let fullscreenOption = document.getElementsByClassName("fullscreen-option")[0].children[2].children[0];
 
 buttonMenu.addEventListener("click",()=>{
-    modalMenu.style.top="50%";
+  modalMenu.style.top="50%";
+})
+buttonHelp.addEventListener("click",()=>{
+  modalHelp.style.top="50%";
 })
 exitModalMenu.addEventListener("click",()=>{
-    modalMenu.style.top="-50%";
+  modalMenu.style.top="-50%";
+})
+exitModalHelp.addEventListener("click",()=>{
+  modalHelp.style.top="-50%";
 })
 buttonReset.addEventListener("click",()=>{
-    location.reload();
+  location.reload();
 })
 fullscreenOption.addEventListener("click",()=>{
     if (itsFullScreen) {
