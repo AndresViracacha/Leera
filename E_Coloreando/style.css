@@ -23,8 +23,107 @@ body{
     padding-top: 16px;
     padding-bottom: 8px;
     position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.eraser{
+    width: 70px;
+    background-color: #F5F4EB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
     top: 150px;
     right: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #F79824;
+    font-family: "Mali";
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background-color:#F79824;
+
+}
+.eraser img{
+    width: 75%;
+    margin-bottom: 10px;
+}
+.widthBrushX{
+    width: 70px;
+    background-color: #F5F4EB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    right: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #F79824;
+    font-family: "Mali";
+    top: 275px ;
+}
+.widthBrushM{
+    width: 70px;
+    background-color: #F5F4EB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    right: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #F79824;
+    font-family: "Mali";
+    top: 350px;
+}
+.widthBrushS{
+    width: 70px;
+    background-color: #F5F4EB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    right: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #F79824;
+    font-family: "Mali";
+    top: 420px;
+}
+.widthBrushS .circle{
+    width: 10px;
+    height: 10px;
+}
+.widthBrushM .circle{
+    width: 20px;
+    height: 20px;
+}
+.widthBrushX .circle{
+    width: 30px;
+    height: 30px;
 }
 .color_selected{
     width: 48px;

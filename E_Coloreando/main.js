@@ -11,12 +11,14 @@ let pictures = [
     "Play.png"
 ]
 let exitBoton = document.getElementById("exit-boton");
+let eraser = document.getElementById("eraser");
 let colorMenu = document.getElementById("color-menu");
 let colorPicker = document.getElementById("color-picker");
 let canva = document.getElementById("canvasp5");
 let colors = document.getElementsByClassName("color-box");
 let colorSelect = '#B80C09';
 let canColor = true;
+let widthBrush = 20;
 
 let voice = new SpeechSynthesisUtterance();
 let jarvis = window.speechSynthesis;
@@ -40,7 +42,7 @@ let sketch = function(p) {
         img = p.loadImage("./img/"+pictures[Math.floor(Math.random()*pictures.length)])
     }        
     p.draw = function() {
-        p.strokeWeight(10);
+        p.strokeWeight(widthBrush);
         p.stroke(colorSelect);
         if (p.mouseIsPressed === true && canColor) {
             p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
@@ -68,7 +70,18 @@ for (let i = 0; i < colors.length; i++) {
         jarvis.speak(voice);
     })
 }
-  /* 
-  window.onbeforeunload = function() {
-    return "Dude, are you sure you want to leave? Think of the kittens!";
-} */
+eraser.addEventListener("click",()=>{
+    colorSelect="#F5F4EB";
+})
+let widthBrushX = document.getElementById("widthBrushX");
+let widthBrushM = document.getElementById("widthBrushM");
+let widthBrushS = document.getElementById("widthBrushS");
+widthBrushX.addEventListener("click",()=>{
+    widthBrush=30
+})
+widthBrushM.addEventListener("click",()=>{
+    widthBrush=20
+})
+widthBrushS.addEventListener("click",()=>{
+    widthBrush=10
+})
