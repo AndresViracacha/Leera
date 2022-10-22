@@ -18,6 +18,11 @@ let colors = document.getElementsByClassName("color-box");
 let colorSelect = '#B80C09';
 let canColor = true;
 
+let voice = new SpeechSynthesisUtterance();
+let jarvis = window.speechSynthesis;
+
+colorPicker.children[1].style.backgroundColor=colorSelect;
+
 exitBoton.addEventListener("click",()=>{
     colorMenu.style.top="-50vh";
     canColor = true;
@@ -48,12 +53,19 @@ let sketch = function(p) {
         }
     }
 }
+window.addEventListener("resize",()=>{
+    canva.removeChild(canva.children[0])
+    new p5(sketch, canva);
+})
+voice.lang = 'es';
 new p5(sketch, canva);
 for (let i = 0; i < colors.length; i++) {
     const element = colors[i];
     element.addEventListener("click",()=>{
         colorSelect=window.getComputedStyle( colors[i].children[0] ,null).getPropertyValue('background-color'); 
         colorPicker.children[1].style.backgroundColor=colorSelect
+        voice.text = element.children[1].textContent;
+        jarvis.speak(voice);
     })
 }
   /* 

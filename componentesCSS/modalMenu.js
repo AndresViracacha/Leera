@@ -27,6 +27,7 @@ let buttonMenu = document.getElementsByClassName("button-menu")[0];
 let buttonHelp = document.getElementsByClassName("button-help")[0];
 let buttonReset = document.getElementsByClassName("modal-buttons")[0].children[1];
 let fullscreenOption = document.getElementsByClassName("fullscreen-option")[0].children[2].children[0];
+let fullscreenOptionMenu = document.getElementsByClassName("fullscreen-option")[1].children[2].children[0];
 
 buttonMenu.addEventListener("click",()=>{
   modalMenu.style.top="50%";
@@ -60,4 +61,22 @@ fullscreenOption.addEventListener("click",()=>{
         fullscreenOption.children[0].textContent="SI"
         fullscreenOption.children[0].style.color="#F5F4EB"
     }
+})
+fullscreenOptionMenu.addEventListener("click",()=>{
+  if (itsFullScreen) {
+      closeFullscreen();
+      itsFullScreen=false;
+      fullscreenOptionMenu.style.left="-2px";
+      fullscreenOptionMenu.style.backgroundColor="#F5F4EB";
+      fullscreenOptionMenu.children[0].textContent="NO"
+      fullscreenOptionMenu.children[0].style.color="#292929"
+
+  }else{
+      openFullscreen();
+      itsFullScreen=true;
+      fullscreenOptionMenu.style.left="23px";
+      fullscreenOptionMenu.style.backgroundColor="#F79824";
+      fullscreenOptionMenu.children[0].textContent="SI"
+      fullscreenOptionMenu.children[0].style.color="#F5F4EB"
+  }
 })
