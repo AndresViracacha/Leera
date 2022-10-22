@@ -19,6 +19,7 @@ body{
 section{
     display: flex;
     flex-direction: column;
+    
     align-items: center;
 }
 .play{
@@ -69,4 +70,21 @@ section{
 .card span{
     padding: 0px;
     text-transform: uppercase;
+}
+.puzzleScreen{
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #F79824;
+}
+.awesomeMessage{
+    width: 75%;
+}
+.puzzleIndicator{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.puzzleIndicator img{
+    width: 150px;
 }

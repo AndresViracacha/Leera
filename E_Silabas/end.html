@@ -4,33 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Completemos!</title>
+    <title>¡Silabas!</title>
+    <link rel="stylesheet" href="../componentesCSS/botonMenuGame.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../componentesCSS/modalMenu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header>
-            <button class="button_home">
-                <img src="../img/home.svg" alt="">
-            </button>
-            <p>Puntos: 40</p>
-        </header>
-        <section>
-            <div class="image">
-                <img src="./" alt="">
+        <section class="puzzleScreen">
+            <p class="awesomeMessage">¡Bien hecho has conseguido un fragmento! ¡Sigue así y desbloquearás un cuento!</p>
+            <div class="puzzleIndicator" id="playButton">
+                <img src="../img/puzzle.svg" alt="">
+                <span>1/6 Fragmentos <br> encontrados </span>
             </div>
-            <p class="story">
-                Adela es una ardilla. Adela tiene muchas amigas. Alina es amiga de Adela. Alina es una ardilla amable. Alina recoge almendras. Alina comparte las almendras con Adela. Adela y Alina son buenas amigas.
-            </p>
         </section>
-        <footer>
-            <div class="next">
-                <img src="../img/next.svg" alt="">
-            </div>
-        </footer>
     </div>
+    <div class="hud">
+        <button class="button-menu button">
+            <img src="../img/home.svg" alt="">
+            Menú
+        </button>
+        <button class="button-help button">
+            <p>
+                <span>?</span> <br>
+                Ayuda
+            </p>
+        </button>
+        <button class="button-next button" id="next">
+            <img src="../img/next.svg" alt="">
+            Avanzar
+        </button>
+        <div class="state">
+            <div class="state-bar">
+                <div class="state-progress">
+                    <p class="state-porcent">30%</p>
+                </div>
+            </div>
+            <p class="state-points">Puntos: <span>100</span></p>
+        </div>
+    </div>
+    <div class="modal-menu" id="modal-menu">
+        <div class="exit-modal-menu" id="exit-modal-menu"><span>X</span></div>
+        <p class="modal-title">Pausa</p>
+        <div class="fullscreen-option">
+            <label for="fullscreen">Pantalla completa</label>
+            <input type="checkbox" name="fullscreen" id="check-fullscreen">
+            <div class="modal-option">
+                <div class="option-button">
+                    <span>NO</span>
+                </div>
+            </div>
+        </div>
+        <div class="sound-option">
+            <label for="sound">Sonido</label>
+            <input type="checkbox" name="sound" id="check-sound" checked>
+            <div class="modal-option">
+                <div class="option-button">
+                    <span>NO</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <a href="../index.html">
+                <button id="modal-home">
+                    <img src="../img/home.svg" alt="">
+                    <span>Inicio</span>
+                </button>
+            </a>
+            <button>
+                <img src="../img/reset.svg" alt="">
+                <span>Reinicio</span>
+            </button>
+        </div>
+    </div>
+    <!-- <div class="help-menu" id="help-menu">
+        <div class="exit-boton" id="exit-boton-help">
+            <img src="../img/exit.svg" alt="">
+        </div>
+        <div class="content">
+            <h2>
+                ¡Sigue las sílabas!
+            </h2>
+            <p>Para mejorar tu experiencia, te aconsejamos activar la pantalla completa</p>
+            <div class="fullscreen-option">
+                <label for="fullscreen">Pantalla completa</label>
+                <input type="checkbox" name="fullscreen" id="check-fullscreen">
+                <div class="modal-option">
+                    <div class="option-button">
+                        <span>NO</span>
+                    </div>
+                </div>
+            </div>
+            <p>
+                En este ejercicio, deberás oprimir el botón <img src="../img/helpMenu/play.png" alt=""> el cual reproducirá en sonido una sílaba. Deberas elegir la sílaba en una de las diferentes tarjetas <img src="../img/helpMenu/cardsCompletemos.png" alt="">. <br> Una vez selecciones la respuesta podrás avanzar al siguiente ejercicio dando click al botón de avanzar <img src="../img/helpMenu/next.png" alt="">
+            </p>    
+        </div>
+        
+
+    </div> -->
+    
+    <script src="./main.js"></script>
+    <script src="../componentesCSS/modalMenu.js"></script>
 </body>
 </html>
