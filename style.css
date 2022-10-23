@@ -6,100 +6,42 @@
 }
 body{
     font-family: 'Mali';
-    background-image: url("./img/Fondo.png");
+    overflow-y: hidden;
 }
 .container{
-    max-width: 1110px;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
-    padding: 0 20px;
     flex-direction: column;
     align-items: center;
-}
-.img-landing{
-    max-width: 740px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-.copy-landing{
-    font-weight: 700;
-    font-size: 48px;
-    text-align: center;
-    color: #F79824;
-    margin-bottom: 50px;
-}
-.copy-landing + p{
-    font-size: 24px;
-    color: #292929;
-    margin-bottom: 40px;
-}
-.exercise{
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin-bottom: 50px;
-}
-.preview{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 90px 22px;
-    background-color: #F79824;
-    width: 30%;
+    height: 100vh;
+    background-image: url("./img/backgroundPrincipal.png");
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-.preview img{
-    width: 100%;
-    border-radius: 20px;
+.container img{
+    margin-bottom: 56px;
+}
+.container button{
+    display: block;
+    width: 411px;
+    height: 93px;
+    background-color: #F79824;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    font-size: 48px;
+    color: #FFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.info{
-    width: 70%;
-    position: relative;
-    background-color: #F5F4EB;
+.kid1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg) translate(-50%);
 }
-.info h2{
-    margin-top: 20px;
-    margin-left: 40px;
-    font-size: 48px;
-    color: #292929;
-}
-.info p{
-    font-size: 24px;
-    color: #292929;
-    padding: 40px;
-}
-.button-container{
-    display: flex;
-    justify-content: end;
-    padding-right: 40px;
-}
-.button{
-    position: relative;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-a{
-    text-decoration: none;
-    cursor: pointer;
-}
-footer{
-    background: #F79824;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-}
-footer>img{
-    max-width: 400px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-footer p{
-    font-size: 24px;
-    text-align: center;
-    color: #F5F4EB;
-    margin-bottom: 80px;
+.kid2{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: rotate(-45deg) translate(50%);
 }
