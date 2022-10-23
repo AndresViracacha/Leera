@@ -37,9 +37,10 @@ for (let i = 0; i < colors.length; i++) {
         colorMenu.style.top="-50vh";
         canColor = true;
         element.style.position="absolute";
-        element.style.left = touchLocation.pageX + 'px';
-        console.log(element);
-        element.style.top = touchLocation.pageY+ window.innerHeight/2 + element.clientHeight + 'px';
+        /* element.style.left = touchLocation.pageX+ window.innerWidht/2 + element.clientWidth+element.clientWidth/2 + 'px';
+        element.style.top = touchLocation.pageY+ window.innerHeight/2 + element.clientHeight+element.clientHeight/2 + 'px'; */
+        element.style.left = touchLocation.pageX-element.clientWidth+ 'px';
+        element.style.top = touchLocation.pageY+ window.innerHeight/2 + element.clientHeight+element.clientHeight/2 + 'px';
       });
     element.addEventListener('touchend', function(e) {
         // current box position.
