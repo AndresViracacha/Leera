@@ -45,3 +45,77 @@ body{
     right: 0;
     transform: rotate(-45deg) translate(50%);
 }
+.fullscreen{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: #F79824;
+}
+.user{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: #F79824;
+}
+.fullscreen img , .user img{
+    margin-right: 32px;
+}
+@media only screen and (max-width:1024px)  {
+    .fullscreen{
+        font-size: 16px;
+    }
+    .user{
+        font-size: 16px;
+    }
+    .fullscreen img{
+        width: 36px;
+    }
+    .user img{
+        width: 27px;
+    }
+    .kid1{
+        width: 330px;
+    }
+    .kid2{
+        width: 330px;
+    }
+    .logo{
+        width: 331px;
+    }
+    .container button{
+        width: 246px;
+        height: 56px;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width:768px)  {
+    .kid1{
+        display: none;
+    }
+    .kid2{
+        width: 238px;
+        right: auto;
+        left: 50%;
+        bottom: 0;
+        transform: rotate(0deg) translate(-50%,110%);
+    }
+    .logo{
+        width: 331px;
+    }
+    .container button{
+        width: 246px;
+        height: 56px;
+        font-size: 24px;
+    }
+    .container{
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+}
