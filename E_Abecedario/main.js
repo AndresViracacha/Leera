@@ -78,6 +78,13 @@ function drop(e) {
     console.log(draggable)
     e.target.appendChild(draggable);
     draggable.classList.remove('hide')
+    if(canva.children.length==5){
+        canva.style.backgroundImage="url('./img/habitacion/complete.png')";
+        for (let i = 0; i <5; i++) {
+            const element = canva.children[0];
+            canva.removeChild(element);
+        }
+    }
 
 }
 

@@ -68,6 +68,7 @@ section{
     background-image: url("./img/habitacion/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 70%;
     min-height: 80vh;
     border-radius: 20px;
