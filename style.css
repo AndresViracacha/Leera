@@ -14,6 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: rgba(254, 202, 64, 0.2);
     background-image: url("./img/backgroundPrincipal.png");
     background-position: center center;
     background-repeat: no-repeat;
