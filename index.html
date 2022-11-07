@@ -12,7 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="hud">
+        <img src="./img/kid1.png" alt="" class="kid1">
+        <img src="./img/kid2.png" alt="" class="kid2">
+        <div class="fullscreen">
+            <img src="./img/fullscreen.svg" alt="">
+            <span>Pantalla <br> Completa</span>
+        </div>
+        <div class="backButton">
+            <img src="./img/next.svg" alt="">
+            <span>Atrás</span>
+        </div>
+    </div>
+    <div class="container" id="principal">
         <img src="./img/newLogo.png" alt="" class="logo">
         <button id="begin">
             Comenzar
@@ -24,7 +36,7 @@
             Acerca de
         </button>
     </div> 
-    <!-- <div class="games">
+    <div class="games" id="games">
         <div class="game">
             <div class="game_play">
                 <img src="./img/playIcon.svg" alt="">
@@ -85,19 +97,8 @@
                 <h2>¡Organicemos el escenario!</h2>
             </div>
         </div>
-    </div> -->
-    <div class="hud">
-       <!--  <img src="./img/kid1.png" alt="" class="kid1">
-        <img src="./img/kid2.png" alt="" class="kid2"> -->
-        <div class="fullscreen">
-            <img src="./img/fullscreen.svg" alt="">
-            <span>Pantalla <br> Completa</span>
-        </div>
-        <div class="user">
-            <img src="./img/user.svg" alt="">
-            <span>Inicia <br> Sesión</span>
-        </div>
     </div>
+    
     <script src="./main.js"></script>
 </body>
 </html>

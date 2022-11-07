@@ -6,7 +6,13 @@
 }
 body{
     font-family: 'Mali';
-    overflow-y: hidden;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(254, 202, 64, 0.2);
+    background-image: url("./img/backgroundPrincipal.png");
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .container{
     display: flex;
@@ -14,10 +20,6 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgba(254, 202, 64, 0.2);
-    background-image: url("./img/backgroundPrincipal.png");
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 .container img{
     margin-bottom: 56px;
@@ -36,26 +38,17 @@ body{
 }
 .kid1{
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: 0;
     transform: rotate(45deg) translate(-50%);
 }
 .kid2{
     position: absolute;
-    top: 50%;
+    top: 50vh;
     right: 0;
     transform: rotate(-45deg) translate(50%);
 }
 .fullscreen{
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    display: flex;
-    align-items: center;
-    font-size: 32px;
-    color: #F79824;
-}
-.user{
     position: absolute;
     top: 30px;
     right: 30px;
@@ -64,7 +57,21 @@ body{
     font-size: 32px;
     color: #F79824;
 }
-.fullscreen img , .user img{
+.backButton{
+    position: absolute;
+    top: 30px;
+    left : 30px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: #F79824;
+}
+.hud{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+}
+.fullscreen img , .backButton img{
     margin-right: 32px;
 }
 .games{
@@ -72,7 +79,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 190px;
+    padding-top: 190px;
 }
 .game{
     margin: 0 92px;
