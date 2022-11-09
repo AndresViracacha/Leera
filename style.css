@@ -9,7 +9,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgba(254, 202, 64, 0.2);
   background-image: url("./img/backgroundPrincipal.png");
   background-position: center center;
@@ -82,7 +82,7 @@ a{
   margin-right: 16px;
 }
 .games {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
