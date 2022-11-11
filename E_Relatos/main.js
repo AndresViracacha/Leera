@@ -6,6 +6,11 @@ let arrowLeft = document.getElementById("arrow-left");
 let triviaElements = [tail]
 let positionIndex=0;
 let nextButton = document.getElementById("next");
+let voice = new SpeechSynthesisUtterance();
+let jarvis = window.speechSynthesis;
+let playButton = document.getElementById("playButton");
+
+
 nextButton.style.display="none";
 
 let answers = [
@@ -98,3 +103,12 @@ for (let i = 0; i < cardsRelatos.length; i++) {
         }
     });
 }
+nextButton.addEventListener("click",()=>{
+    location.href="https://andresviracacha.github.io/Leera/"
+});
+
+voice.lang = 'es';
+playButton.addEventListener('click',()=>{
+    voice.text = "Adela es una ardilla. Adela tiene muchas amigas. Alina es amiga de Adela. Alina es una ardilla amable. Alina recoge almendras. Alina comparte las almendras con Adela. Adela y Alina son buenas amigas.";
+    jarvis.speak(voice);
+});

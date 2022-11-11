@@ -34,6 +34,10 @@ button p{
     right: 30px;
     bottom: 30px;
 }
+.button-play-letter{
+    right: 30px;
+    top: 400px;
+}
 
 .state{
     position: absolute;

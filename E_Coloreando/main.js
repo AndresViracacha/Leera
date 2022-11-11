@@ -15,10 +15,15 @@ let eraser = document.getElementById("eraser");
 let colorMenu = document.getElementById("color-menu");
 let colorPicker = document.getElementById("color-picker");
 let canva = document.getElementById("canvasp5");
+let next = document.getElementById("next");
 let colors = document.getElementsByClassName("color-box");
 let colorSelect = '#B80C09';
 let canColor = true;
 let widthBrush = 20;
+
+next.addEventListener("click",()=>{
+    location.href="https://andresviracacha.github.io/Leera/"
+});
 
 let voice = new SpeechSynthesisUtterance();
 let jarvis = window.speechSynthesis;

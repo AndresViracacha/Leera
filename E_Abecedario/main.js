@@ -10,6 +10,8 @@ let pictures = [
     "Planetas.png",
     "Play.png"
 ]
+let voice = new SpeechSynthesisUtterance();
+let jarvis = window.speechSynthesis;
 let exitBoton = document.getElementById("exit-boton");
 let colorMenu = document.getElementById("color-menu");
 let colorPicker = document.getElementById("color-picker");
@@ -17,6 +19,13 @@ let canva = document.getElementById("canva");
 let colors = document.getElementsByClassName("color-box");
 let colorSelect = '#B80C09';
 let canColor = true;
+let nextButton = document.getElementById("next");
+let playButtonLetter = document.getElementById("play");
+
+
+nextButton.addEventListener("click",()=>{
+    location.href="https://andresviracacha.github.io/Leera/"
+});
 
 exitBoton.addEventListener("click",()=>{
     colorMenu.style.top="-50vh";
@@ -27,23 +36,24 @@ colorPicker.addEventListener("click",()=>{
     canColor = false;
 });
 
+voice.lang = 'es';
+playButtonLetter.addEventListener('click',()=>{
+    let letters = ["c","l","m","s","v"]
+    voice.text = letters[Math.floor(Math.random()*4.9)];
+    jarvis.speak(voice);
+});
+
 for (let i = 0; i < colors.length; i++) {
     const element = colors[i];
     element.addEventListener('touchmove', function(e) {
-        // grab the location of touch
         var touchLocation = e.targetTouches[0];
-        
-        // assign box new coordinates based on the touch.
         colorMenu.style.top="-50vh";
         canColor = true;
         element.style.position="absolute";
-        /* element.style.left = touchLocation.pageX+ window.innerWidht/2 + element.clientWidth+element.clientWidth/2 + 'px';
-        element.style.top = touchLocation.pageY+ window.innerHeight/2 + element.clientHeight+element.clientHeight/2 + 'px'; */
         element.style.left = touchLocation.pageX-element.clientWidth+ 'px';
         element.style.top = touchLocation.pageY+ window.innerHeight/2 + element.clientHeight+element.clientHeight/2 + 'px';
       });
     element.addEventListener('touchend', function(e) {
-        // current box position.
         var x = parseInt(element.style.left);
         var y = parseInt(element.style.top);
     })
@@ -98,22 +108,3 @@ for (let i = 0; i < colors.length; i++) {
     const element = colors[i];
     element.addEventListener("dragstart",dragStart)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*addEventListener('pointerdown')
-  /* 
-  window.onbeforeunload = function() {
-    return "Dude, are you sure you want to leave? Think of the kittens!";
-} */
