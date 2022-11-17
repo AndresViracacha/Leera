@@ -72,6 +72,8 @@ let wordImage = document.getElementById("word");
 let positionCorrect = Math.floor(Math.random()*3);
 let lettersUsed = [];
 
+let points = 0;
+
 const selectLetter = () =>{
     let a = true;
     let index;
@@ -91,7 +93,7 @@ const selectLetter = () =>{
     return index;
 }
 const selectWord = () => {
-    let item = wordsCompletemos[Math.floor(Math.random()*60)]
+    let item = wordsCompletemos[Math.floor(Math.random()*59)]
     selectedWord = item[0];
     imageRoute = item[1];
     return {selectedWord,imageRoute};
@@ -109,6 +111,12 @@ let playButton = document.getElementById("playButton");
 let next = document.getElementById("next");
 var elem = document.documentElement;
 
+let textPoints = document.getElementsByClassName("state-points")[0];
+
+let porcent = 0;
+let bar = document.getElementsByClassName("state-progress")[0];
+let barText = document.getElementsByClassName("state-porcent")[0];
+
 for (let i = 0; i < cards.length; i++) {
     cards[i].children[0].innerHTML=lettersCompletemos[Math.floor(Math.random()*lettersCompletemos.length)];
 }
@@ -125,10 +133,11 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click",()=>{   
         if(cards[i].children[0].innerText==selectedWord[charSelected].toUpperCase()){
             cards[i].classList.add("correct")
+            points = puntos(true,points,textPoints);
         }
         if(cards[i].children[0].innerText!=selectedWord[charSelected].toUpperCase()){
             cards[i].classList.add("incorrect")
-            
+            points = puntos(false,points,textPoints);
         }
         let letter = document.getElementsByClassName("card")[i].children[0].textContent;
         voice.text = letter;
@@ -147,6 +156,8 @@ playButton.addEventListener('click',()=>{
 });
 
 next.addEventListener('click',()=>{
+    porcent = avanzarBar(bar,porcent,barText)
+
     lettersUsed = [];
     positionCorrect = Math.floor(Math.random()*3);
     let next1 = document.getElementById("next").innerText;

@@ -10,6 +10,9 @@ let voice = new SpeechSynthesisUtterance();
 let jarvis = window.speechSynthesis;
 let playButton = document.getElementById("playButton");
 
+let points = 0; 
+let textPoints = document.getElementsByClassName("state-points")[0];
+
 
 nextButton.style.display="none";
 
@@ -89,12 +92,15 @@ arrowLeft.addEventListener('click',()=>{
 for (let i = 0; i < cardsRelatos.length; i++) {
     const element = cardsRelatos[i];
     element.addEventListener("click",()=>{
+        let correct=0;
+        let incorrect=0;
         for (let j = 0; j < answers.length; j++) {
             const element2 = answers[j];
-            console.log(element.children[1].textContent==element2)
             if(element.children[1].textContent!=element2){
                 element.classList.add("incorrect")
+                points = puntos(false,points,textPoints);
             }else{
+                points = puntos(true,points,textPoints);
                 element.classList.add("correct")
                 element.classList.remove("incorrect")
                 verification();

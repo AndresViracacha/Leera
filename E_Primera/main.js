@@ -37,6 +37,12 @@ let options = document.getElementsByClassName("card");
 let positionCorrectPrimera = Math.floor(Math.random()*3);
 let lettersUsedPrimera = [];
 
+let points = 0;
+let textPoints = document.getElementsByClassName("state-points")[0];
+let porcent = 0;
+let bar = document.getElementsByClassName("state-progress")[0];
+let barText = document.getElementsByClassName("state-porcent")[0];
+
 voice.lang = 'es';
 playButton.addEventListener('click',()=>{
     voice.text = word;
@@ -56,9 +62,11 @@ for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click",()=>{   
         if(options[i].children[0].innerText==firstLetter){
             options[i].classList.add("correct")
+            points = puntos(true,points,textPoints);
         }
         if(options[i].children[0].innerText!=firstLetter){
             options[i].classList.add("incorrect")
+            points = puntos(false,points,textPoints);
         }
         let letter = document.getElementsByClassName("card")[i].children[0].textContent;
         voice.text = letter;
@@ -66,6 +74,7 @@ for (let i = 0; i < options.length; i++) {
     })
 }
 next.addEventListener('click',()=>{
+    porcent = avanzarBar(bar,porcent,barText)
     word = selectWord();
     firstLetter = word[0].toUpperCase();
     lettersUsedPrimera = [];
