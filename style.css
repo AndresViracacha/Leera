@@ -170,6 +170,18 @@ a{
   }
 }
 @media only screen and (max-width: 1200px) {
+  .fullscreen {
+    font-size: 16px;
+  }
+  .backButton {
+    font-size: 16px;
+  }
+  .fullscreen img {
+    width: 36px;
+  }
+  .backButton img {
+    width: 27px;
+  }
     .kid1 {
         width: 300px;
       }
@@ -218,6 +230,8 @@ a{
     display: none;
   }
   .kid2 {
+    display: none;
+
     width: 238px;
     right: auto;
     left: 50%;
